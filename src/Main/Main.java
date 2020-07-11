@@ -18,6 +18,9 @@ public class Main {
         if (!fo.Is_File()) {
             return;
         }
+        if (!fo.Json_data()) {
+            return;
+        }
         Excel_operations eo = new Excel_operations();
         try {
             if (!eo.Get_Data_from_Excel(fo.file_excel)) {
